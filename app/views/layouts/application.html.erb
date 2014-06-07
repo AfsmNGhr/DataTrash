@@ -16,7 +16,24 @@
 <li class="has-dropdown">
         <a href="#">Приложения</a>
         <ul class="dropdown">
-          <li><a href="#">Kali Linux</a></li>
+          <li class="has-dropdown"><a href="#">Kali Linux</a>
+<ul class="dropdown">
+<li class="has-dropdown"><a href="#">Top 10 Secutiry Tools</a>
+<ul class="dropdown">
+<li><a href="#">aircrack-ng</a></li>
+<li><a href="#">burpsuite</a><li>
+<li><a href="#">hydra</a></li>
+<li><a href="#">john</a></li>
+<li><a href="#">maltego</a></li>
+<li><a href="#">metasploit framework</a></li>
+<li><a href="#">nmap</a></li>
+<li><a href="#">owasp-zap</a></li>
+<li><a href="#">sqlmap</a></li>
+<li><a href="#">wireshark</a><li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <li class="has-dropdown">
         <a href="#">Переход</a>
@@ -29,8 +46,12 @@
 	  <li><a href="#">Сеть</a></li>
 	   <li class="divider"></li>
 </ul>
-     <li><%= link_to image_tag("browser.png", :border => 0), :url => 'browser' %></li>
-<li><%= link_to image_tag("terminal.png", :border => 0), :url => 'terminal' %></li>
+     <li><%= link_to image_tag("browser.png", :border => 0) %></li>
+<li class="has-dropdown"><%= link_to image_tag("terminal.png", :border => 0) %>
+<ul class="dropdown">
+<li><%= render "/layouts/terminal" %></li>
+</ul>
+</li>
       <% else %>
       <% end %>  
  </ul>  
@@ -39,17 +60,24 @@
 
        <ul class="right">
 <% if current_user %>
-<li><%= link_to image_tag("audio.png", :border => 0), :url => 'audio' %></li>
+<li><%= link_to image_tag("audio.png", :border => 0) %></li>
 <li><a href="/">en</a></li> 
-<li><%= link_to image_tag("network.png", :border => 0), :url => 'network' %></li>
-<li><%= link_to image_tag("user.png", :border => 0), :url => 'social' %></li><li><%= link_to current_user.login, edit_user_registration_path %></li>
-  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
-  <% else %>
-<li class="has-dropdown"><%= link_to image_tag("help.png", :border => 0), "/"%></li>
+<li><%= link_to image_tag("network.png", :border => 0) %></li>
+<li><%= link_to image_tag("user.png", :border => 0) %></li><li class="has-dropdown"><%= link_to current_user.login %>
 <ul class="dropdown">
-<li><a href="#">Sign up</a></li>
+<li><%= link_to "Параметры системы", edit_user_registration_path %>
+</li>
+<li class="divider"></li>
+<li><%= link_to "Завершить сеанс...", destroy_user_session_path, :method => :delete  %></li>
 </ul>
-<li><%= link_to image_tag("logout.png", :border => 0), :url => 'users/sign_out' %></li>
+</li>
+  <% else %>
+<li class="has-dropdown"><%= link_to image_tag("help.png", :border => 0), "/"%>
+<ul class="dropdown">
+<li><%= link_to "Sign up", new_registration_path(resource_name) %></li>
+<li><%= link_to "Forgot your password?", new_password_path(resource_name) %></li>
+</ul>
+</li>
 <% end %>
      </ul>
    </section>
