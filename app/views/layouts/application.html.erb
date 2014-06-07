@@ -9,67 +9,59 @@
     <%= csrf_meta_tags %>
   </head>
 <body class="body">
-  <nav class="navbar navbar-inner navbar-fixed-top" role="navigation">
-<div class="container-fluid">
- <% if current_user %>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
-<ul class="nav navbar-nav">
-        <li class="dropdown">
-	  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Приложения<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li>
-<div><%= link_to image_tag("logo.png", :border => 0) %><a href="#" class="dropdown-toggle" data-toggle="dropdown">Kali Linux<b class="caret"></b></a></div></li>
-<ul class="dropdown-menu">
-<li><a href="#">Another action</a></li>
+ <nav class="top-bar" data-topbar>
+  <section class="top-bar-section">
+    <ul class="left">
+<% if current_user %>
+<li class="has-dropdown">
+        <a href="#">Приложения</a>
+        <ul class="dropdown">
+          <li><a href="#">Kali Linux</a></li>
 </ul>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Переход<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+<li class="has-dropdown">
+        <a href="#">Переход</a>
+        <ul class="dropdown">
+          <li><a href="#">Домашняя папка</a></li>
+	  <li><a href="#">Рабочий стол</a></li>
+	   <li class="divider"></li>
+	  <li><a href="#">Компьютер</a></li>
+	   <li class="divider"></li>
+	  <li><a href="#">Сеть</a></li>
+	   <li class="divider"></li>
+</ul>
      <li><%= link_to image_tag("browser.png", :border => 0), :url => 'browser' %></li>
 <li><%= link_to image_tag("terminal.png", :border => 0), :url => 'terminal' %></li>
       <% else %>
       <% end %>  
  </ul>  
-<ul class="nav navbar-nav navbar-center"> 
+
 <div class="time"><span id="date"></span>, <span id="hour_min"></span><span id="sec"></span></div>
-</ul>
-       <ul class="nav navbar-nav navbar-right">
+
+       <ul class="right">
 <% if current_user %>
 <li><%= link_to image_tag("audio.png", :border => 0), :url => 'audio' %></li>
 <li><a href="/">en</a></li> 
 <li><%= link_to image_tag("network.png", :border => 0), :url => 'network' %></li>
 <li><%= link_to image_tag("user.png", :border => 0), :url => 'social' %></li><li><%= link_to current_user.login, edit_user_registration_path %></li>
   <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete  %></li>
-</ul>
   <% else %>
-<li><%= link_to image_tag("help.png", :border => 0), "/"%></li>
+<li class="has-dropdown"><%= link_to image_tag("help.png", :border => 0), "/"%></li>
+<ul class="dropdown">
+<li><a href="#">Sign up</a></li>
+</ul>
 <li><%= link_to image_tag("logout.png", :border => 0), :url => 'users/sign_out' %></li>
 <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+     </ul>
+   </section>
+</nav>
 
 <div class="row">
+ <div class="twelve columns centered">
     <%= yield %>
+ </div>
 </div>
-  <%= javascript_include_tag "application" %> 
- </body>
+  
+<%= javascript_include_tag "application" %> 
+ 
+</body>
 </html>

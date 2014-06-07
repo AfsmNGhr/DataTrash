@@ -2,14 +2,28 @@
   background: image-url("kali.png") no-repeat center center fixed;
   background-color: #000;
 }
+.top-bar ul > li.has-dropdown a:after { 
+  content: "";
+  display: none;
+  width: 0;
+  height: 0;
+  border:0;
+  border-color: none;
+  border-left-style: none;
+  margin-right: 0;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .login {
   position: absolute;
   background-color: #ccc; 
   color: #778;
   font: normal small-caps 12px/14px fantasy; 
-  min-width: 310px;
-  min-height: 300px; 
-  margin: 15% 0% 0% 43%; 
+  min-width: 350px;
+  min-height: 450px; 
+  margin: 15% 0% 0% 35%; 
 }
 .logo {
   padding-top: 10%;
@@ -17,18 +31,5 @@
 .sessions {
  padding-top: 5%;
  position: absolute;
- padding-left: 21%;
-}
-.navbar-inner {
-  background-color: #000;
-  background-image: none;
-  background-repeat: no-repeat;
-  color: #ccc;
-  font: normal 12px fantasy;
-}
-.navbar .nav > li > a {
-  color: #ccc;
-  height: 36px;
-  padding-top: 10px;
-  font: bold 12px fantasy; 
+ padding-left: 20%;
 }
