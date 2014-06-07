@@ -1,0 +1,34 @@
+.body {
+  background: image-url("kali.png") no-repeat center center fixed;
+  background-color: #000;
+}
+.login {
+  position: absolute;
+  background-color: #ccc; 
+  color: #778;
+  font: normal small-caps 12px/14px fantasy; 
+  min-width: 310px;
+  min-height: 300px; 
+  margin: 15% 0% 0% 43%; 
+}
+.logo {
+  padding-top: 10%;
+}
+.sessions {
+ padding-top: 5%;
+ position: absolute;
+ padding-left: 21%;
+}
+.navbar-inner {
+  background-color: #000;
+  background-image: none;
+  background-repeat: no-repeat;
+  color: #ccc;
+  font: normal 12px fantasy;
+}
+.navbar .nav > li > a {
+  color: #ccc;
+  height: 36px;
+  padding-top: 10px;
+  font: bold 12px fantasy; 
+}
