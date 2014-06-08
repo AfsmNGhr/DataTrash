@@ -9,41 +9,33 @@
     <%= csrf_meta_tags %>
   </head>
 <body class="body">
- <nav class="top-bar" data-topbar>
+ <nav class="top-bar fixed" data-topbar>
   <section class="top-bar-section">
     <ul class="left">
 <% if current_user %>
 <li class="has-dropdown">
         <a href="#">Приложения</a>
         <ul class="dropdown">
-          <li class="has-dropdown"><a href="#">Kali Linux</a>
+          <li class="has-dropdown"><%= link_to image_tag("logo.png", :border => 0) + ' ' + "Kali Linux", "#" %>
 <ul class="dropdown">
-<li class="has-dropdown"><a href="#">Top 10 Secutiry Tools</a>
-<ul class="dropdown">
-<li><a href="#">aircrack-ng</a></li>
-<li><a href="#">burpsuite</a><li>
-<li><a href="#">hydra</a></li>
-<li><a href="#">john</a></li>
-<li><a href="#">maltego</a></li>
-<li><a href="#">metasploit framework</a></li>
-<li><a href="#">nmap</a></li>
-<li><a href="#">owasp-zap</a></li>
-<li><a href="#">sqlmap</a></li>
-<li><a href="#">wireshark</a><li>
-</ul>
-</li>
+<%= render "/layouts/menu/top_10/top10_index" %>
+ <li class="divider"></li>
+<%= render "/layouts/menu/info_gathering/info_gathering_index" %>
+<%= render "/layouts/menu/vuln_analysis/vuln_analysis_index" %>
+<%= render "/layouts/menu/web_app/web_app_index" %>
+<%= render "/layouts/menu/pass_attacks/pass_attacks_index" %>
 </ul>
 </li>
 </ul>
 <li class="has-dropdown">
         <a href="#">Переход</a>
         <ul class="dropdown">
-          <li><a href="#">Домашняя папка</a></li>
-	  <li><a href="#">Рабочий стол</a></li>
+<li><%= link_to image_tag("user-home.png", :border => 0) + ' ' + "Домашняя папка", "/" %></li>
+<li><%= link_to image_tag("user-desktop.png", :border => 0) + ' ' + "Рабочий стол", "#" %></li>
 	   <li class="divider"></li>
-	  <li><a href="#">Компьютер</a></li>
+	  <li><%= link_to image_tag("user-computer.png", :border => 0) + ' ' + "Компьютер", "#" %></li>
 	   <li class="divider"></li>
-	  <li><a href="#">Сеть</a></li>
+	<li><%= link_to image_tag("network-workgroup.png", :border => 0) + ' ' + "Сеть", "#" %></li>
 	   <li class="divider"></li>
 </ul>
      <li><%= link_to image_tag("browser.png", :border => 0) %></li>
@@ -52,7 +44,6 @@
 <li><%= render "/layouts/terminal" %></li>
 </ul>
 </li>
-      <% else %>
       <% end %>  
  </ul>  
 
@@ -63,8 +54,11 @@
 <li><%= link_to image_tag("audio.png", :border => 0) %></li>
 <li><a href="/">en</a></li> 
 <li><%= link_to image_tag("network.png", :border => 0) %></li>
-<li><%= link_to image_tag("user.png", :border => 0) %></li><li class="has-dropdown"><%= link_to current_user.login %>
+<li class="has-dropdown"><%= link_to image_tag("user.png", :border => 0) + ' ' + current_user.login %>
 <ul class="dropdown">
+<li><a href="#">Доступен</a></li>
+<li><a href="#">Занят</a></li>
+<li class="divider"></li>
 <li><%= link_to "Параметры системы", edit_user_registration_path %>
 </li>
 <li class="divider"></li>
