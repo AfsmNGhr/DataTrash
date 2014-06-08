@@ -1,0 +1,24 @@
+<li class="has-dropdown"><%= link_to image_tag("password-attacks.png", :border => 0) + ' ' + "Password Attacks", "#" %>
+<ul class="dropdown">
+<li class="has-dropdown"><%= link_to image_tag("password-attacks.png", :border => 0) + ' ' + "GPU Tools", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/pass_attacks/gpu_tools" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("password-attacks.png", :border => 0) + ' ' + "Offline Attacks", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/pass_attacks/off_attacks" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("password-attacks.png", :border => 0) + ' ' + "Online Attacks", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/pass_attacks/on_attacks" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("password-attacks.png", :border => 0) + ' ' + "Passing the Hash", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/pass_attacks/pass_hash" %>
+</ul>
+</li>
+</ul>
+</li>

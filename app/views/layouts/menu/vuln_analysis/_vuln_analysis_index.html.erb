@@ -1,0 +1,34 @@
+<li class="has-dropdown"><%= link_to image_tag("vuln-assessment.png", :border => 0) + ' ' + "Vulnerability Analysis", "#" %>
+<ul class="dropdown">
+<li class="has-dropdown"><%= link_to image_tag("vuln-assessment.png", :border => 0) + ' ' + "Cisco Tools", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/vuln_analysis/cisco_tools" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("vuln-assessment.png", :border => 0) + ' ' + "Database Assessment", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/vuln_analysis/database_assess" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("vuln-assessment.png", :border => 0) + ' ' + "Fuzzing Tools", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/vuln_analysis/fuzzing_tools" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("vuln-assessment.png", :border => 0) + ' ' + "Misc Scanners", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/vuln_analysis/misc_scan" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("vuln-assessment.png", :border => 0) + ' ' + "Open Source Assessment", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/vuln_analysis/open_source_assess" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("vuln-assessment.png", :border => 0) + ' ' + "OpenVAS", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/vuln_analysis/openvas" %>
+</ul>
+</li>
+</ul>
+</li>
