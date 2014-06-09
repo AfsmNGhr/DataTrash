@@ -1,0 +1,29 @@
+<li class="has-dropdown"><%= link_to image_tag("sniffing-spoofing.png") + ' ' + "Sniffing/Spoofing", "#" %>
+<ul class="dropdown">
+<li class="has-dropdown"><%= link_to image_tag("sniffing-spoofing.png") + ' ' + "Network Sniffers", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/sniff_spoof/net_sniff" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("sniffing-spoofing.png") + ' ' + "Network Spoofing", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/sniff_spoof/spoof" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("sniffing-spoofing.png") + ' ' + "Voice and Surveillance", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/sniff_spoof/voice_surve" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("sniffing-spoofing.png") + ' ' + "VoIP Tools", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/sniff_spoof/voip" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("sniffing-spoofing.png") + ' ' + "Web Sniffers", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/sniff_spoof/web_sniff" %>
+</ul>
+</li>
+</ul>
+</li>

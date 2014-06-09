@@ -1,0 +1,19 @@
+<li class="has-dropdown"><%= link_to image_tag("reverse-engineering.png") + ' ' + "Reverse Engineering", "#" %>
+<ul class="dropdown">
+<li class="has-dropdown"><%= link_to image_tag("reverse-engineering.png") + ' ' + "Debuggers", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/reverse_engine/debug" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("reverse-engineering.png") + ' ' + "Disassembly", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/reverse_engine/disassembly" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("reverse-engineering.png") + ' ' + "Misc RE Tools", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/reverse_engine/misc_re" %>
+</ul>
+</li>
+</ul>
+</li>

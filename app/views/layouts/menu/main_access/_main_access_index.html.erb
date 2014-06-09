@@ -1,0 +1,19 @@
+<li class="has-dropdown"><%= link_to image_tag("maintaining-access.png") + ' ' + "Maintaining Access", "#" %>
+<ul class="dropdown">
+<li class="has-dropdown"><%= link_to image_tag("maintaining-access.png") + ' ' + "OS Backdoors", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/main_access/os_backdoors" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("maintaining-access.png") + ' ' + "Tunneling Tools", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/main_access/tun_tools" %>
+</ul>
+</li>
+<li class="has-dropdown"><%= link_to image_tag("maintaining-access.png") + ' ' + "Web Backdoors", "#" %>
+<ul class="dropdown">
+<%= render "/layouts/menu/main_access/web_backdoors" %>
+</ul>
+</li>
+</ul>
+</li>
