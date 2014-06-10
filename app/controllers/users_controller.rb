@@ -75,4 +75,5 @@ class UsersController < Devise::RegistrationsController
     def user_params
       params.require(:user).permit(:login, :password, :email)
     end
+
 end
